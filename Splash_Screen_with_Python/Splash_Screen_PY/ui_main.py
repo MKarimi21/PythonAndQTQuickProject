@@ -16,41 +16,41 @@ from PySide2.QtWidgets import *
 
 
 
-from PyQt5 import QtCore, QtGui, QtWidgets
+# from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(800, 600)
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
-        self.centralwidget.setObjectName("centralwidget")
-        self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
-        self.verticalLayout.setObjectName("verticalLayout")
-        self.label = QtWidgets.QLabel(self.centralwidget)
-        font = QtGui.QFont()
-        font.setFamily("Roboto Thin")
-        font.setPointSize(25)
-        self.label.setFont(font)
-        self.label.setAlignment(QtCore.Qt.AlignCenter)
-        self.label.setObjectName("label")
-        self.verticalLayout.addWidget(self.label)
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 25))
-        self.menubar.setObjectName("menubar")
-        MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
+# class Ui_MainWindow(object):
+#     def setupUi(self, MainWindow):
+#         MainWindow.setObjectName("MainWindow")
+#         MainWindow.resize(800, 600)
+#         self.centralwidget = QtWidgets.QWidget(MainWindow)
+#         self.centralwidget.setObjectName("centralwidget")
+#         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
+#         self.verticalLayout.setObjectName("verticalLayout")
+#         self.label = QtWidgets.QLabel(self.centralwidget)
+#         font = QtGui.QFont()
+#         font.setFamily("Roboto Thin")
+#         font.setPointSize(25)
+#         self.label.setFont(font)
+#         self.label.setAlignment(QtCore.Qt.AlignCenter)
+#         self.label.setObjectName("label")
+#         self.verticalLayout.addWidget(self.label)
+#         MainWindow.setCentralWidget(self.centralwidget)
+#         self.menubar = QtWidgets.QMenuBar(MainWindow)
+#         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 25))
+#         self.menubar.setObjectName("menubar")
+#         MainWindow.setMenuBar(self.menubar)
+#         self.statusbar = QtWidgets.QStatusBar(MainWindow)
+#         self.statusbar.setObjectName("statusbar")
+#         MainWindow.setStatusBar(self.statusbar)
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+#         self.retranslateUi(MainWindow)
+#         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-    def retranslateUi(self, MainWindow):
-        _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label.setText(_translate("MainWindow", "MY APP - AND HERE IS WIDGETS PLACE"))
+#     def retranslateUi(self, MainWindow):
+#         _translate = QtCore.QCoreApplication.translate
+#         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+#         self.label.setText(_translate("MainWindow", "MY APP - AND HERE IS WIDGETS PLACE"))
 
 
 # if __name__ == "__main__":
@@ -61,3 +61,47 @@ class Ui_MainWindow(object):
 #     ui.setupUi(MainWindow)
 #     MainWindow.show()
 #     sys.exit(app.exec_())
+
+
+
+# ===================== with qt app
+
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        if MainWindow.objectName():
+            MainWindow.setObjectName(u"MainWindow")
+        MainWindow.resize(640, 480)
+        self.centralwidget = QWidget(MainWindow)
+        self.centralwidget.setObjectName(u"centralwidget")
+        self.verticalLayout = QVBoxLayout(self.centralwidget)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.label = QLabel(self.centralwidget)
+        self.label.setObjectName(u"label")
+        font = QFont()
+        font.setFamily(u"Roboto Thin")
+        font.setPointSize(25)
+        self.label.setFont(font)
+        self.label.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout.addWidget(self.label)
+
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QMenuBar(MainWindow)
+        self.menubar.setObjectName(u"menubar")
+        self.menubar.setGeometry(QRect(0, 0, 640, 21))
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QStatusBar(MainWindow)
+        self.statusbar.setObjectName(u"statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+
+        QMetaObject.connectSlotsByName(MainWindow)
+    # setupUi
+
+    def retranslateUi(self, MainWindow):
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        self.label.setText(QCoreApplication.translate("MainWindow", u"MY APP - ADD HERE MY WIDGETS", None))
+    # retranslateUi
+
