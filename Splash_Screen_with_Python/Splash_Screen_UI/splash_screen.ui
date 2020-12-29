@@ -24,7 +24,7 @@
        <string notr="true">QFrame{
 	background-color: rgb(56, 58, 89);
 	color: rgb(220, 220, 220);
-	border-radus: 10px;
+	border-radius: 10px;
 }</string>
       </property>
       <property name="frameShape">
@@ -115,7 +115,7 @@ QProgressBar::chunk{
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>270</y>
+         <y>280</y>
          <width>661</width>
          <height>31</height>
         </rect>
