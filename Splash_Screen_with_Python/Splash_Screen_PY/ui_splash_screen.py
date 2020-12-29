@@ -16,7 +16,7 @@ from PySide2.QtWidgets import *
 
 
 
-from PyQt5 import QtCore, QtGui, QtWidgets
+# from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class Ui_SplashScreen(object):
