@@ -19,13 +19,13 @@ from PySide2.QtWidgets import *
 from ui_splash_screen import Ui_SplashScreen
 
 ## ==> MAIN WINDOW
-from ui_splash_screen import Ui_SplashScreen
+
 
 ## ==> GLOBALS
 counter = 0
 
 # YOUR APPLICATION
-class MainWindow(QMainWindow):
+class SplashScreen(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
         self.ui = Ui_MainWindow()
