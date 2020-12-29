@@ -16,96 +16,96 @@ from PySide2.QtWidgets import *
 
 
 
-from PyQt5 import QtCore, QtGui, QtWidgets
+# from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_SplashScreen(object):
-    def setupUi(self, SplashScreen):
-        SplashScreen.setObjectName("SplashScreen")
-        SplashScreen.resize(680, 400)
-        self.centralwidget = QtWidgets.QWidget(SplashScreen)
-        self.centralwidget.setObjectName("centralwidget")
-        self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
-        self.verticalLayout.setSpacing(0)
-        self.verticalLayout.setObjectName("verticalLayout")
-        self.dropShadowFrame = QtWidgets.QFrame(self.centralwidget)
-        self.dropShadowFrame.setStyleSheet("QFrame{\n"
-"    background-color: rgb(56, 58, 89);\n"
-"    color: rgb(220, 220, 220);\n"
-"    border-radius: 10px;\n"
-"}")
-        self.dropShadowFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.dropShadowFrame.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.dropShadowFrame.setObjectName("dropShadowFrame")
-        self.label_title = QtWidgets.QLabel(self.dropShadowFrame)
-        self.label_title.setGeometry(QtCore.QRect(0, 70, 661, 81))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        font.setPointSize(40)
-        self.label_title.setFont(font)
-        self.label_title.setStyleSheet("color: rgb(254, 121, 199);")
-        self.label_title.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_title.setObjectName("label_title")
-        self.label_description = QtWidgets.QLabel(self.dropShadowFrame)
-        self.label_description.setGeometry(QtCore.QRect(0, 150, 661, 31))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        font.setPointSize(14)
-        self.label_description.setFont(font)
-        self.label_description.setStyleSheet("color: rgb(98, 114, 164);")
-        self.label_description.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_description.setObjectName("label_description")
-        self.progressBar = QtWidgets.QProgressBar(self.dropShadowFrame)
-        self.progressBar.setGeometry(QtCore.QRect(50, 250, 571, 23))
-        self.progressBar.setStyleSheet("QProgressBar {\n"
-"    background-color: rgb(98, 114, 164);\n"
-"    color: rgb(200, 200, 200);\n"
-"    border-style: none;\n"
-"    border-radius: 10px;\n"
-"    text-align: center;\n"
-"\n"
-"}\n"
-"\n"
-"QProgressBar::chunk{\n"
-"    border-radius: 10px;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:0.506, x2:1, y2:0.5, stop:0 rgba(0, 0, 0, 255), stop:0.00540541 rgba(0, 0, 0, 255), stop:0.0108108 rgba(254, 121, 199, 255), stop:1 rgba(170, 85, 255, 255));\n"
-"}")
-        self.progressBar.setProperty("value", 24)
-        self.progressBar.setObjectName("progressBar")
-        self.label_loading = QtWidgets.QLabel(self.dropShadowFrame)
-        self.label_loading.setGeometry(QtCore.QRect(0, 280, 661, 31))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        font.setPointSize(12)
-        self.label_loading.setFont(font)
-        self.label_loading.setContextMenuPolicy(QtCore.Qt.DefaultContextMenu)
-        self.label_loading.setStyleSheet("color: rgb(98, 114, 164);")
-        self.label_loading.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_loading.setObjectName("label_loading")
-        self.label_credits = QtWidgets.QLabel(self.dropShadowFrame)
-        self.label_credits.setGeometry(QtCore.QRect(0, 330, 651, 31))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        font.setPointSize(10)
-        self.label_credits.setFont(font)
-        self.label_credits.setContextMenuPolicy(QtCore.Qt.DefaultContextMenu)
-        self.label_credits.setStyleSheet("color: rgb(98, 114, 164);")
-        self.label_credits.setLineWidth(1)
-        self.label_credits.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.label_credits.setObjectName("label_credits")
-        self.verticalLayout.addWidget(self.dropShadowFrame)
-        SplashScreen.setCentralWidget(self.centralwidget)
+# class Ui_SplashScreen(object):
+#     def setupUi(self, SplashScreen):
+#         SplashScreen.setObjectName("SplashScreen")
+#         SplashScreen.resize(680, 400)
+#         self.centralwidget = QtWidgets.QWidget(SplashScreen)
+#         self.centralwidget.setObjectName("centralwidget")
+#         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
+#         self.verticalLayout.setSpacing(0)
+#         self.verticalLayout.setObjectName("verticalLayout")
+#         self.dropShadowFrame = QtWidgets.QFrame(self.centralwidget)
+#         self.dropShadowFrame.setStyleSheet("QFrame{\n"
+# "    background-color: rgb(56, 58, 89);\n"
+# "    color: rgb(220, 220, 220);\n"
+# "    border-radius: 10px;\n"
+# "}")
+#         self.dropShadowFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+#         self.dropShadowFrame.setFrameShadow(QtWidgets.QFrame.Raised)
+#         self.dropShadowFrame.setObjectName("dropShadowFrame")
+#         self.label_title = QtWidgets.QLabel(self.dropShadowFrame)
+#         self.label_title.setGeometry(QtCore.QRect(0, 70, 661, 81))
+#         font = QtGui.QFont()
+#         font.setFamily("Segoe UI")
+#         font.setPointSize(40)
+#         self.label_title.setFont(font)
+#         self.label_title.setStyleSheet("color: rgb(254, 121, 199);")
+#         self.label_title.setAlignment(QtCore.Qt.AlignCenter)
+#         self.label_title.setObjectName("label_title")
+#         self.label_description = QtWidgets.QLabel(self.dropShadowFrame)
+#         self.label_description.setGeometry(QtCore.QRect(0, 150, 661, 31))
+#         font = QtGui.QFont()
+#         font.setFamily("Segoe UI")
+#         font.setPointSize(14)
+#         self.label_description.setFont(font)
+#         self.label_description.setStyleSheet("color: rgb(98, 114, 164);")
+#         self.label_description.setAlignment(QtCore.Qt.AlignCenter)
+#         self.label_description.setObjectName("label_description")
+#         self.progressBar = QtWidgets.QProgressBar(self.dropShadowFrame)
+#         self.progressBar.setGeometry(QtCore.QRect(50, 250, 571, 23))
+#         self.progressBar.setStyleSheet("QProgressBar {\n"
+# "    background-color: rgb(98, 114, 164);\n"
+# "    color: rgb(200, 200, 200);\n"
+# "    border-style: none;\n"
+# "    border-radius: 10px;\n"
+# "    text-align: center;\n"
+# "\n"
+# "}\n"
+# "\n"
+# "QProgressBar::chunk{\n"
+# "    border-radius: 10px;\n"
+# "    background-color: qlineargradient(spread:pad, x1:0, y1:0.506, x2:1, y2:0.5, stop:0 rgba(0, 0, 0, 255), stop:0.00540541 rgba(0, 0, 0, 255), stop:0.0108108 rgba(254, 121, 199, 255), stop:1 rgba(170, 85, 255, 255));\n"
+# "}")
+#         self.progressBar.setProperty("value", 24)
+#         self.progressBar.setObjectName("progressBar")
+#         self.label_loading = QtWidgets.QLabel(self.dropShadowFrame)
+#         self.label_loading.setGeometry(QtCore.QRect(0, 280, 661, 31))
+#         font = QtGui.QFont()
+#         font.setFamily("Segoe UI")
+#         font.setPointSize(12)
+#         self.label_loading.setFont(font)
+#         self.label_loading.setContextMenuPolicy(QtCore.Qt.DefaultContextMenu)
+#         self.label_loading.setStyleSheet("color: rgb(98, 114, 164);")
+#         self.label_loading.setAlignment(QtCore.Qt.AlignCenter)
+#         self.label_loading.setObjectName("label_loading")
+#         self.label_credits = QtWidgets.QLabel(self.dropShadowFrame)
+#         self.label_credits.setGeometry(QtCore.QRect(0, 330, 651, 31))
+#         font = QtGui.QFont()
+#         font.setFamily("Segoe UI")
+#         font.setPointSize(10)
+#         self.label_credits.setFont(font)
+#         self.label_credits.setContextMenuPolicy(QtCore.Qt.DefaultContextMenu)
+#         self.label_credits.setStyleSheet("color: rgb(98, 114, 164);")
+#         self.label_credits.setLineWidth(1)
+#         self.label_credits.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+#         self.label_credits.setObjectName("label_credits")
+#         self.verticalLayout.addWidget(self.dropShadowFrame)
+#         SplashScreen.setCentralWidget(self.centralwidget)
 
-        self.retranslateUi(SplashScreen)
-        QtCore.QMetaObject.connectSlotsByName(SplashScreen)
+#         self.retranslateUi(SplashScreen)
+#         QtCore.QMetaObject.connectSlotsByName(SplashScreen)
 
-    def retranslateUi(self, SplashScreen):
-        _translate = QtCore.QCoreApplication.translate
-        SplashScreen.setWindowTitle(_translate("SplashScreen", "MainWindow"))
-        self.label_title.setText(_translate("SplashScreen", "<strong>My</strong> APP Name"))
-        self.label_description.setText(_translate("SplashScreen", "<strong>APP</strong> DESCRIPTION"))
-        self.label_loading.setText(_translate("SplashScreen", "loading..."))
-        self.label_credits.setText(_translate("SplashScreen", "<strong>Created: </strong> Mostafa Karimi"))
+#     def retranslateUi(self, SplashScreen):
+#         _translate = QtCore.QCoreApplication.translate
+#         SplashScreen.setWindowTitle(_translate("SplashScreen", "MainWindow"))
+#         self.label_title.setText(_translate("SplashScreen", "<strong>My</strong> APP Name"))
+#         self.label_description.setText(_translate("SplashScreen", "<strong>APP</strong> DESCRIPTION"))
+#         self.label_loading.setText(_translate("SplashScreen", "loading..."))
+#         self.label_credits.setText(_translate("SplashScreen", "<strong>Created: </strong> Mostafa Karimi"))
 
 
 # if __name__ == "__main__":
@@ -116,3 +116,95 @@ class Ui_SplashScreen(object):
 #     ui.setupUi(SplashScreen)
 #     SplashScreen.show()
 #     sys.exit(app.exec_())
+
+# ============================== with qt app
+
+class Ui_SplashScreen(object):
+    def setupUi(self, SplashScreen):
+        if SplashScreen.objectName():
+            SplashScreen.setObjectName(u"SplashScreen")
+        SplashScreen.resize(680, 400)
+        self.centralwidget = QWidget(SplashScreen)
+        self.centralwidget.setObjectName(u"centralwidget")
+        self.verticalLayout = QVBoxLayout(self.centralwidget)
+        self.verticalLayout.setSpacing(0)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.verticalLayout.setContentsMargins(10, 10, 10, 10)
+        self.dropShadowFrame = QFrame(self.centralwidget)
+        self.dropShadowFrame.setObjectName(u"dropShadowFrame")
+        self.dropShadowFrame.setStyleSheet(u"QFrame {	\n"
+"	background-color: rgb(56, 58, 89);	\n"
+"	color: rgb(220, 220, 220);\n"
+"	border-radius: 10px;\n"
+"}")
+        self.dropShadowFrame.setFrameShape(QFrame.StyledPanel)
+        self.dropShadowFrame.setFrameShadow(QFrame.Raised)
+        self.label_title = QLabel(self.dropShadowFrame)
+        self.label_title.setObjectName(u"label_title")
+        self.label_title.setGeometry(QRect(0, 90, 661, 61))
+        font = QFont()
+        font.setFamily(u"Segoe UI")
+        font.setPointSize(40)
+        self.label_title.setFont(font)
+        self.label_title.setStyleSheet(u"color: rgb(254, 121, 199);")
+        self.label_title.setAlignment(Qt.AlignCenter)
+        self.label_description = QLabel(self.dropShadowFrame)
+        self.label_description.setObjectName(u"label_description")
+        self.label_description.setGeometry(QRect(0, 150, 661, 31))
+        font1 = QFont()
+        font1.setFamily(u"Segoe UI")
+        font1.setPointSize(14)
+        self.label_description.setFont(font1)
+        self.label_description.setStyleSheet(u"color: rgb(98, 114, 164);")
+        self.label_description.setAlignment(Qt.AlignCenter)
+        self.progressBar = QProgressBar(self.dropShadowFrame)
+        self.progressBar.setObjectName(u"progressBar")
+        self.progressBar.setGeometry(QRect(50, 280, 561, 23))
+        self.progressBar.setStyleSheet(u"QProgressBar {\n"
+"	\n"
+"	background-color: rgb(98, 114, 164);\n"
+"	color: rgb(200, 200, 200);\n"
+"	border-style: none;\n"
+"	border-radius: 10px;\n"
+"	text-align: center;\n"
+"}\n"
+"QProgressBar::chunk{\n"
+"	border-radius: 10px;\n"
+"	background-color: qlineargradient(spread:pad, x1:0, y1:0.511364, x2:1, y2:0.523, stop:0 rgba(254, 121, 199, 255), stop:1 rgba(170, 85, 255, 255));\n"
+"}")
+        self.progressBar.setValue(24)
+        self.label_loading = QLabel(self.dropShadowFrame)
+        self.label_loading.setObjectName(u"label_loading")
+        self.label_loading.setGeometry(QRect(0, 320, 661, 21))
+        font2 = QFont()
+        font2.setFamily(u"Segoe UI")
+        font2.setPointSize(12)
+        self.label_loading.setFont(font2)
+        self.label_loading.setStyleSheet(u"color: rgb(98, 114, 164);")
+        self.label_loading.setAlignment(Qt.AlignCenter)
+        self.label_credits = QLabel(self.dropShadowFrame)
+        self.label_credits.setObjectName(u"label_credits")
+        self.label_credits.setGeometry(QRect(20, 350, 621, 21))
+        font3 = QFont()
+        font3.setFamily(u"Segoe UI")
+        font3.setPointSize(10)
+        self.label_credits.setFont(font3)
+        self.label_credits.setStyleSheet(u"color: rgb(98, 114, 164);")
+        self.label_credits.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.verticalLayout.addWidget(self.dropShadowFrame)
+
+        SplashScreen.setCentralWidget(self.centralwidget)
+
+        self.retranslateUi(SplashScreen)
+
+        QMetaObject.connectSlotsByName(SplashScreen)
+    # setupUi
+
+    def retranslateUi(self, SplashScreen):
+        SplashScreen.setWindowTitle(QCoreApplication.translate("SplashScreen", u"MainWindow", None))
+        self.label_title.setText(QCoreApplication.translate("SplashScreen", u"<strong>MY</strong> APP NAME", None))
+        self.label_description.setText(QCoreApplication.translate("SplashScreen", u"<strong>APP</strong> DESCRIPTION", None))
+        self.label_loading.setText(QCoreApplication.translate("SplashScreen", u"loading...", None))
+        self.label_credits.setText(QCoreApplication.translate("SplashScreen", u"<strong>Created</strong>: Mostafa Karimi", None))
+    # retranslateUi
