@@ -19,7 +19,8 @@
      <widget class="QLabel" name="label">
       <property name="font">
        <font>
-        <family>Rockwell</family>
+        <family>Roboto Thin</family>
+        <pointsize>25</pointsize>
        </font>
       </property>
       <property name="text">
