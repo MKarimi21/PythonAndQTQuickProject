@@ -32,7 +32,7 @@ class MainWindow(QMainWindow):
         self.ui.setupUi(self)
 
         # MAIN WINDOW LABEL
-        QtCore.QTimer.singleShot(1500, lambda: self.ui.label.setText("<strong>THANKS</strong> FOR WATCHING My APP"))
+        QtCore.QTimer.singleShot(1500, lambda: self.ui.label.setText("<strong>THANKS</strong> FOR WATCHING MY APP"))
         QtCore.QTimer.singleShot(1500, lambda: self.setStyleSheet("background-color: #222; color: #FFF"))
 
 
