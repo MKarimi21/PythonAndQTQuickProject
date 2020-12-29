@@ -28,7 +28,7 @@ counter = 0
 class SplashScreen(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
-        self.ui = Ui_MainWindow()
+        self.ui = Ui_SplashScreen()
         self.ui.setupUi(self)
 
 
