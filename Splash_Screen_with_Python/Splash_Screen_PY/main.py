@@ -35,6 +35,10 @@ class SplashScreen(QMainWindow):
 
         # ================================= UI >> INTERFACE CODE
 
+        ## =============== Remove title bar plash
+        self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
+        self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+
 
 
 

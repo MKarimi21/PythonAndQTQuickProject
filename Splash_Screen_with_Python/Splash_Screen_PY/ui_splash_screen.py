@@ -16,7 +16,7 @@ from PySide2.QtWidgets import *
 
 
 
-# from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class Ui_SplashScreen(object):
@@ -108,11 +108,11 @@ class Ui_SplashScreen(object):
         self.label_credits.setText(_translate("SplashScreen", "<strong>Created: </strong> Mostafa Karimi"))
 
 
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    SplashScreen = QtWidgets.QMainWindow()
-    ui = Ui_SplashScreen()
-    ui.setupUi(SplashScreen)
-    SplashScreen.show()
-    sys.exit(app.exec_())
+# if __name__ == "__main__":
+#     import sys
+#     app = QtWidgets.QApplication(sys.argv)
+#     SplashScreen = QtWidgets.QMainWindow()
+#     ui = Ui_SplashScreen()
+#     ui.setupUi(SplashScreen)
+#     SplashScreen.show()
+#     sys.exit(app.exec_())
