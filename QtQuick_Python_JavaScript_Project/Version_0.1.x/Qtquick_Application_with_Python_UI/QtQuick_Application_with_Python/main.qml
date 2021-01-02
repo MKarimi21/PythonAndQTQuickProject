@@ -7,19 +7,70 @@ Window {
     width: 1000
     height: 580
     visible: true
-    title: qsTr("Couse")
+    color: "#00000000"
+    title: qsTr("Couse Qt Quick")
 
     Rectangle {
         id: bg
-        color: "#4182c3"
+        color: "#1d3b44"
+        radius: 0
+        border.color: "#337688"
+        border.width: 1
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.top: parent.top
         anchors.bottom: parent.bottom
-        anchors.rightMargin: 100
-        anchors.leftMargin: 100
-        anchors.bottomMargin: 100
-        anchors.topMargin: 100
+        anchors.rightMargin: 10
+        anchors.leftMargin: 10
+        anchors.bottomMargin: 10
+        anchors.topMargin: 10
+
+        Rectangle {
+            id: appContainer
+            color: "#00000000"
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+            anchors.rightMargin: 1
+            anchors.leftMargin: 1
+            anchors.bottomMargin: 1
+            anchors.topMargin: 1
+
+            Rectangle {
+                id: topBar
+                height: 60
+                color: "#1c1d20"
+                anchors.left: parent.left
+                anchors.right: parent.right
+                anchors.top: parent.top
+                anchors.rightMargin: 0
+                anchors.leftMargin: 0
+                anchors.topMargin: 0
+            }
+
+            Rectangle {
+                id: content
+                color: "#00000000"
+                anchors.left: parent.left
+                anchors.right: parent.right
+                anchors.top: topBar.bottom
+                anchors.bottom: parent.bottom
+                anchors.topMargin: 0
+
+                Rectangle {
+                    id: leftMenu
+                    width: 70
+                    color: "#1c1d20"
+                    anchors.left: parent.left
+                    anchors.top: parent.top
+                    anchors.bottom: parent.bottom
+                    anchors.leftMargin: 0
+                    anchors.bottomMargin: 0
+                    anchors.topMargin: 0
+                }
+            }
+        }
     }
 }
 
