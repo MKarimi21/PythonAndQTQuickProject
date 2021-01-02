@@ -3,14 +3,14 @@ import QtQuick.Window 2.15
 import QtQuick.Controls 2.15
 
 Window {
-    id: window
+    id: mainWindow
     width: 1000
     height: 580
     visible: true
     title: qsTr("Couse")
 
     Rectangle {
-        id: rectangle
+        id: bg
         color: "#4182c3"
         anchors.left: parent.left
         anchors.right: parent.right
