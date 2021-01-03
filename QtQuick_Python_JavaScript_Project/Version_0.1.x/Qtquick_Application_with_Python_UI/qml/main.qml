@@ -47,6 +47,102 @@ Window {
                 anchors.rightMargin: 0
                 anchors.leftMargin: 0
                 anchors.topMargin: 0
+
+                Button {
+                    id: toggleBtn
+                    width: 70
+                    height: 60
+                    text: qsTr("Toggle")
+                    anchors.left: parent.left
+                    anchors.top: parent.top
+                    anchors.leftMargin: 0
+                    anchors.topMargin: 0
+                }
+
+                Rectangle {
+                    id: topBarDescription
+                    y: 19
+                    height: 33
+                    color: "#152b31"
+                    anchors.left: parent.left
+                    anchors.right: parent.right
+                    anchors.bottom: parent.bottom
+                    anchors.rightMargin: 0
+                    anchors.leftMargin: 70
+                    anchors.bottomMargin: 0
+
+                    Label {
+                        id: labelTopInfo
+                        color: "#99a2aa"
+                        text: qsTr("Application Description")
+                        anchors.left: parent.left
+                        anchors.right: parent.right
+                        anchors.top: parent.top
+                        anchors.bottom: parent.bottom
+                        verticalAlignment: Text.AlignVCenter
+                        anchors.rightMargin: 300
+                        anchors.leftMargin: 10
+                        anchors.bottomMargin: 0
+                        anchors.topMargin: 0
+                    }
+
+                    Label {
+                        id: labelRighteInfo
+                        color: "#99a2aa"
+                        text: qsTr("| HOME")
+                        anchors.left: labelTopInfo.right
+                        anchors.right: parent.right
+                        anchors.top: parent.top
+                        anchors.bottom: parent.bottom
+                        horizontalAlignment: Text.AlignRight
+                        verticalAlignment: Text.AlignVCenter
+                        anchors.bottomMargin: 0
+                        anchors.topMargin: 0
+                        anchors.rightMargin: 10
+                        anchors.leftMargin: 0
+                    }
+                }
+
+                Rectangle {
+                    id: titleBar
+                    x: 70
+                    y: 0
+                    width: 803
+                    height: 35
+                    color: "#00000000"
+                    anchors.left: parent.left
+                    anchors.right: parent.right
+                    anchors.top: parent.bottom
+                    anchors.topMargin: -59
+                    anchors.rightMargin: 105
+                    anchors.leftMargin: 70
+
+                    Image {
+                        id: iconApp
+                        width: 28
+                        anchors.left: parent.left
+                        anchors.top: parent.top
+                        anchors.bottom: parent.bottom
+                        source: "qrc:/qtquickplugin/images/template_image.png"
+                        anchors.leftMargin: 5
+                        anchors.bottomMargin: 0
+                        anchors.topMargin: 0
+                        fillMode: Image.PreserveAspectFit
+                    }
+
+                    Label {
+                        id: label
+                        color: "#c9d5e0"
+                        text: qsTr("My Application Title")
+                        anchors.left: iconApp.right
+                        anchors.right: parent.right
+                        anchors.top: parent.top
+                        anchors.bottom: parent.bottom
+                        verticalAlignment: Text.AlignVCenter
+                        font.pointSize: 10
+                        anchors.leftMargin: 5
+                    }
+                }
             }
 
             Rectangle {
@@ -67,6 +163,19 @@ Window {
                     anchors.bottom: parent.bottom
                     anchors.leftMargin: 0
                     anchors.bottomMargin: 0
+                    anchors.topMargin: 0
+                }
+
+                Rectangle {
+                    id: rectangle
+                    color: "#ffffff"
+                    anchors.left: leftMenu.right
+                    anchors.right: parent.right
+                    anchors.top: parent.top
+                    anchors.bottom: parent.bottom
+                    anchors.rightMargin: 0
+                    anchors.leftMargin: 0
+                    anchors.bottomMargin: 25
                     anchors.topMargin: 0
                 }
             }
