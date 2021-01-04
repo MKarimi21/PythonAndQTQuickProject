@@ -143,6 +143,24 @@ Window {
                         anchors.leftMargin: 5
                     }
                 }
+
+                Row {
+                    id: rowBtns
+                    x: 872
+                    width: 105
+                    height: 35
+                    anchors.right: parent.right
+                    anchors.top: parent.top
+                    anchors.rightMargin: 0
+                    anchors.topMargin: 0
+
+                    Button {
+                        id: btnMinimize
+                        width: 35
+                        height: 35
+                        text: qsTr("Button")
+                    }
+                }
             }
 
             Rectangle {
@@ -164,11 +182,29 @@ Window {
                     anchors.leftMargin: 0
                     anchors.bottomMargin: 0
                     anchors.topMargin: 0
+
+                    Column {
+                        id: columnMenus
+                        anchors.left: parent.left
+                        anchors.right: parent.right
+                        anchors.top: parent.top
+                        anchors.bottom: parent.bottom
+                        anchors.rightMargin: 0
+                        anchors.leftMargin: 0
+                        anchors.bottomMargin: 90
+                        anchors.topMargin: 0
+
+                        Button {
+                            id: button
+                            width: 70
+                            text: qsTr("Button")
+                        }
+                    }
                 }
 
                 Rectangle {
-                    id: rectangle
-                    color: "#ffffff"
+                    id: contentPages
+                    color: "#00000000"
                     anchors.left: leftMenu.right
                     anchors.right: parent.right
                     anchors.top: parent.top
@@ -177,6 +213,34 @@ Window {
                     anchors.leftMargin: 0
                     anchors.bottomMargin: 25
                     anchors.topMargin: 0
+                }
+
+                Rectangle {
+                    id: rectangle
+                    color: "#152b31"
+                    anchors.left: leftMenu.right
+                    anchors.right: parent.right
+                    anchors.top: contentPages.bottom
+                    anchors.bottom: parent.bottom
+                    anchors.rightMargin: 0
+                    anchors.leftMargin: 0
+                    anchors.bottomMargin: 0
+                    anchors.topMargin: 0
+
+                    Label {
+                        id: labelTopInfo1
+                        color: "#99a2aa"
+                        text: qsTr("Application Description")
+                        anchors.left: parent.left
+                        anchors.right: parent.right
+                        anchors.top: parent.top
+                        anchors.bottom: parent.bottom
+                        verticalAlignment: Text.AlignVCenter
+                        anchors.leftMargin: 10
+                        anchors.bottomMargin: 0
+                        anchors.topMargin: 0
+                        anchors.rightMargin: 30
+                    }
                 }
             }
         }
