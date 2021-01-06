@@ -188,21 +188,58 @@ Window {
 
                     Column {
                         id: columnMenus
+                        width: 198
                         anchors.left: parent.left
                         anchors.right: parent.right
                         anchors.top: parent.top
                         anchors.bottom: parent.bottom
+                        clip: true
                         anchors.rightMargin: 0
                         anchors.leftMargin: 0
                         anchors.bottomMargin: 90
                         anchors.topMargin: 0
 
-                        Button {
-                            id: button
-                            width: 70
-                            text: qsTr("Button")
+                        LeftMenuBtn {
+                            id: btnHome
+                            width: 250
+
+                            text: qsTr("Home")
+                            isActiveMenu: true
+
+
                         }
+
+                        LeftMenuBtn {
+                            id: btnHome1
+                            text: qsTr("Open")
+                            isActiveMenu: false
+                            btnIconSource: "../image/svg_images/open_icon.svg"
+                        }
+
+                        LeftMenuBtn {
+                            id: btnHome2
+                            text: qsTr("Save")
+                            isActiveMenu: false
+                            btnIconSource: "../image/svg_images/save_icon.svg"
+                        }
+
                     }
+
+                    LeftMenuBtn {
+                        id: btnHome3
+                        x: 0
+                        y: 413
+
+                        text: qsTr("Setting")
+                        anchors.bottom: parent.bottom
+                        clip: true
+
+                        anchors.bottomMargin: 25
+                        btnIconSource: "../image/svg_images/settings_icon.svg"
+                        isActiveMenu: false
+                    }
+
+
                 }
 
                 Rectangle {
@@ -245,9 +282,13 @@ Window {
                         anchors.rightMargin: 30
                     }
                 }
+
+
             }
         }
     }
+
+
 }
 
 
