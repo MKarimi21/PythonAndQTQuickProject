@@ -369,6 +369,44 @@ Window {
                         anchors.topMargin: 0
                         anchors.rightMargin: 30
                     }
+
+
+                    MouseArea {
+                        id: resizeWindow
+                        x: 884
+                        y: 0
+                        width: 25
+                        height: 25
+                        anchors.right: parent.right
+                        anchors.bottom: parent.bottom
+                        anchors.rightMargin: 0
+                        anchors.bottomMargin: 0
+                        cursorShape: Qt.SizeFDiagCursor
+
+                        Image {
+                            id: resizeImage
+                            width: 16
+                            height: 16
+                            opacity: 0.5
+                            anchors.fill: parent
+                            source: "../image/svg_images/resize_icon.svg"
+                            mipmap: true
+                            sourceSize.height: 16
+                            sourceSize.width: 16
+                            fillMode: Image.PreserveAspectFit
+                            antialiasing: false
+                        }
+
+                        DragHandler{
+                            target: null
+                            onActiveChanged: if(active){
+                                                 mainWindow.startSystemResize(Qt.RightEdge | Qt.BottomEdge)
+                                             }
+                        }
+
+                    }
+
+
                 }
 
 
@@ -387,6 +425,9 @@ Window {
         z: 0
     }
 
+
+    // MOUSE ARGUMENT FOR RESIZING IN 4 SIDE FOR APP
+
     MouseArea {
         id: resizeLeft
         width: 10
@@ -403,6 +444,65 @@ Window {
             onActiveChanged: if(active){mainWindow.startSystemResize(Qt.LeftEdge)}
         }
     }
+
+    MouseArea {
+        id: resizeBottom
+        y: 580
+        height: 10
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        anchors.rightMargin: 10
+        anchors.leftMargin: 10
+        anchors.bottomMargin: 0
+        cursorShape: Qt.SizeVerCursor
+
+        DragHandler{
+            target: null
+            onActiveChanged: if(active){mainWindow.startSystemResize(Qt.BottomEdge)}
+        }
+    }
+
+    MouseArea {
+        id: resizeRight
+        width: 10
+        anchors.right: parent.right
+        anchors.top: parent.top
+        anchors.bottom: parent.bottom
+        anchors.rightMargin: 0
+        anchors.bottomMargin: 10
+        anchors.topMargin: 10
+        cursorShape: Qt.SizeHorCursor
+
+        DragHandler{
+            target: null
+            onActiveChanged: if(active){mainWindow.startSystemResize(Qt.RightEdge)}
+        }
+    }
+
+
+
+
+
+
+
+
+    //    MouseArea {
+    //        id: resizeTop
+    //        width: 10
+    //        anchors.right: parent.right
+    //        anchors.top: parent.top
+    //        anchors.bottom: parent.bottom
+    //        anchors.rightMargin: 0
+    //        anchors.bottomMargin: 10
+    //        anchors.topMargin: 10
+    //        cursorShape: Qt.SizeVerCursor
+
+    //        DragHandler{
+    //            target: null
+    //            onActiveChanged: if(active){mainWindow.startSystemResize(Qt.RightEdge)}
+    //        }
+    //    }
 
 }
 
