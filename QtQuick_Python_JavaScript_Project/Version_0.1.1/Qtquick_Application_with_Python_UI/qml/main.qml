@@ -17,9 +17,29 @@ Window {
 
     title: qsTr("Couse Qt Quick")
 
+    // properties for restor after maximize
+    property int windowStatus: 0
+    property int windowMargin: 10
+
+
     // INTERNAL FUNCTION FOR MINIMIZE, MAXIMIZE and CLOSE APP
     QtObject{
         id: internal
+
+        function maximizeRestore(){
+            if(windowStatus == 0){
+
+                mainWindow.showMaximized()
+                windowStatus = 1
+                windowMargin = 0
+            }
+            else{
+
+                mainWindow.showNormal()
+                windowStatus = 0
+                windowMargin = 10
+            }
+        }
 
     }
 
@@ -34,10 +54,10 @@ Window {
         anchors.right: parent.right
         anchors.top: parent.top
         anchors.bottom: parent.bottom
-        anchors.rightMargin: 10
-        anchors.leftMargin: 10
-        anchors.bottomMargin: 10
-        anchors.topMargin: 10
+        anchors.rightMargin: windowMargin
+        anchors.leftMargin: windowMargin
+        anchors.bottomMargin: windowMargin
+        anchors.topMargin: windowMargin
         z: 1
 
         Rectangle {
@@ -183,7 +203,7 @@ Window {
                     TopBarButton {
                         id: btnMaximizeRestore
                         btnIconSource: "../image/svg_images/maximize_icon.svg"
-                        onClicked: mainWindow.showMaximized()
+                        onClicked: internal.maximizeRestore()
                     }
 
                     TopBarButton {
