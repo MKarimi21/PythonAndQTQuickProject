@@ -10,7 +10,8 @@ Window {
     visible: true
     color: "#00000000"
 
-
+    // REMOVE TITLE BAR
+    flags: Qt.Window | Qt.FramelessWindowHint
 
 
     title: qsTr("Couse Qt Quick")
