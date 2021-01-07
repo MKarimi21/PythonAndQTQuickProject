@@ -49,12 +49,14 @@ Window {
                 mainWindow.showNormal()
                 windowStatus = 0
                 windowMargin =10
+                btnMaximizeRestore.btnIconSource = "../image/svg_images/maximize_icon.svg"
             }
         }
 
         function restoreMargins(){
             windowStatus = 0
             windowMargin = 10
+            btnMaximizeRestore.btnIconSource = "../image/svg_images/maximize_icon.svg"
         }
 
     }
