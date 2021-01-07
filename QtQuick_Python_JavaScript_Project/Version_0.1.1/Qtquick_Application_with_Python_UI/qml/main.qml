@@ -32,13 +32,29 @@ Window {
                 mainWindow.showMaximized()
                 windowStatus = 1
                 windowMargin = 0
+
+                btnMaximizeRestore.btnIconSource = "../image/svg_images/restore_icon.svg"
             }
             else{
 
                 mainWindow.showNormal()
                 windowStatus = 0
                 windowMargin = 10
+                btnMaximizeRestore.btnIconSource = "../image/svg_images/maximize_icon.svg"
             }
+        }
+
+        function ifMaximizedWindowRestore(){
+            if(windowStatus == 1){
+                mainWindow.showNormal()
+                windowStatus = 0
+                windowMargin =10
+            }
+        }
+
+        function restoreMargins(){
+            windowStatus = 0
+            windowMargin = 10
         }
 
     }
@@ -149,6 +165,7 @@ Window {
                     DragHandler{
                         onActiveChanged: if(active){
                                              mainWindow.startSystemMove()
+                                             internal.ifMaximizedWindowRestore()
                                          }
                     }
 
@@ -196,7 +213,10 @@ Window {
 
                     TopBarButton{
                         id: btnMinimize
-                        onClicked: mainWindow.showMinimized()
+                        onClicked: {
+                            mainWindow.showMinimized()
+                            internal.restoreMargins()
+                        }
 
                     }
 
@@ -242,7 +262,7 @@ Window {
                         target: leftMenu
                         property: "width"
                         to: if(leftMenu.width == 70) return 240; else return 70
-                        duration: 1000
+                        duration: 1500
                         easing.type: Easing.OutBounce
                     }
 
