@@ -395,6 +395,11 @@ Window {
         anchors.bottomMargin: 10
         anchors.topMargin: 10
         cursorShape: Qt.SizeHorCursor
+
+        DragHandler{
+            target: null
+            onActiveChanged: if(active){mainWindow.startSystemResize(Qt.LeftEdge)}
+        }
     }
 
 }
