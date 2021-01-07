@@ -55,9 +55,9 @@ Window {
 
                 Rectangle {
                     id: topBarDescription
-                    y: 19
-                    height: 33
-                    color: "#152b31"
+                    y: 28
+                    height: 25
+                    color: "#282c34"
                     anchors.left: parent.left
                     anchors.right: parent.right
                     anchors.bottom: parent.bottom
@@ -67,7 +67,7 @@ Window {
 
                     Label {
                         id: labelTopInfo
-                        color: "#99a2aa"
+                        color: "#5f6a82"
                         text: qsTr("Application Description")
                         anchors.left: parent.left
                         anchors.right: parent.right
@@ -82,7 +82,7 @@ Window {
 
                     Label {
                         id: labelRighteInfo
-                        color: "#99a2aa"
+                        color: "#5f6a82"
                         text: qsTr("| HOME")
                         anchors.left: labelTopInfo.right
                         anchors.right: parent.right
@@ -99,15 +99,15 @@ Window {
 
                 Rectangle {
                     id: titleBar
-                    x: 70
-                    y: 0
-                    width: 803
+                    //x: 70
+                    //y: 0
+                    //width: 803
                     height: 35
                     color: "#00000000"
                     anchors.left: parent.left
                     anchors.right: parent.right
-                    anchors.top: parent.bottom
-                    anchors.topMargin: -59
+                    anchors.top: parent.top
+                    anchors.topMargin: 0
                     anchors.rightMargin: 105
                     anchors.leftMargin: 70
 
@@ -126,13 +126,15 @@ Window {
 
                     Label {
                         id: label
-                        color: "#c9d5e0"
+                        color: "#c3cbdd"
                         text: qsTr("My Application Title")
                         anchors.left: iconApp.right
                         anchors.right: parent.right
                         anchors.top: parent.top
                         anchors.bottom: parent.bottom
                         verticalAlignment: Text.AlignVCenter
+                        anchors.topMargin: 0
+                        anchors.bottomMargin: 0
                         font.pointSize: 10
                         anchors.leftMargin: 5
                     }
@@ -182,6 +184,7 @@ Window {
                     anchors.left: parent.left
                     anchors.top: parent.top
                     anchors.bottom: parent.bottom
+                    clip: true
                     anchors.leftMargin: 0
                     anchors.bottomMargin: 0
                     anchors.topMargin: 0
@@ -227,6 +230,7 @@ Window {
 
                     LeftMenuBtn {
                         id: btnHome3
+                        width: leftMenu.width
                         x: 0
                         y: 413
 
@@ -257,7 +261,7 @@ Window {
 
                 Rectangle {
                     id: rectangle
-                    color: "#152b31"
+                    color: "#282c34"
                     anchors.left: leftMenu.right
                     anchors.right: parent.right
                     anchors.top: contentPages.bottom
@@ -269,7 +273,7 @@ Window {
 
                     Label {
                         id: labelTopInfo1
-                        color: "#99a2aa"
+                        color: "#5f6a82"
                         text: qsTr("Application Description")
                         anchors.left: parent.left
                         anchors.right: parent.right
