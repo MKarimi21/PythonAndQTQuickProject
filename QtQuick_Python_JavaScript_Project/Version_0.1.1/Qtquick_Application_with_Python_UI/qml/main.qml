@@ -315,6 +315,11 @@ Window {
 
                             text: qsTr("Home")
                             isActiveMenu: true
+                            onClicked: {
+                                btnHome.isActiveMenu = true
+                                btnSettings.isActiveMenu = false
+                                stackView.push(Qt.resolvedUrl("pages/homePage.qml"))
+                            }
 
 
                         }
