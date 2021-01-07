@@ -9,6 +9,10 @@ Window {
     height: 580
     visible: true
     color: "#00000000"
+
+
+
+
     title: qsTr("Couse Qt Quick")
 
     Rectangle {
@@ -50,7 +54,7 @@ Window {
                 anchors.topMargin: 0
 
                 ToggleButton{
-
+                    onClicked: animationMenu.running = true
                 }
 
                 Rectangle {
@@ -113,11 +117,12 @@ Window {
 
                     Image {
                         id: iconApp
-                        width: 28
+                        width: 22
+                        height: 22
                         anchors.left: parent.left
                         anchors.top: parent.top
                         anchors.bottom: parent.bottom
-                        source: "qrc:/qtquickplugin/images/template_image.png"
+                        source: "../image/svg_images/main_icon.svg"
                         anchors.leftMargin: 5
                         anchors.bottomMargin: 0
                         anchors.topMargin: 0
@@ -188,6 +193,19 @@ Window {
                     anchors.leftMargin: 0
                     anchors.bottomMargin: 0
                     anchors.topMargin: 0
+
+                    // ANIMATION FOR OPEN FILE
+                    PropertyAnimation{
+                        id: animationMenu
+                        target: leftMenu
+                        property: "width"
+                        to: if(leftMenu.width == 70) return 240; else return 70
+                        duration: 1000
+                        easing.type: Easing.OutBounce
+                    }
+
+
+
 
                     Column {
                         id: columnMenus
