@@ -385,6 +385,18 @@ Window {
         z: 0
     }
 
+    MouseArea {
+        id: resizeLeft
+        width: 10
+        anchors.left: parent.left
+        anchors.top: parent.top
+        anchors.bottom: parent.bottom
+        anchors.leftMargin: 0
+        anchors.bottomMargin: 10
+        anchors.topMargin: 10
+        cursorShape: Qt.SizeHorCursor
+    }
+
 }
 
 
