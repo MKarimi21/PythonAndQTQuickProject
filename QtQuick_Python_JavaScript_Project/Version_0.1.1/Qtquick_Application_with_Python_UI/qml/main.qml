@@ -318,8 +318,8 @@ Window {
                             onClicked: {
                                 btnHome.isActiveMenu = true
                                 btnSettings.isActiveMenu = false
-//                                stackView.push(Qt.resolvedUrl("pages/homePage.qml"))
-                                pagesView.setSource(Qt.resolvedUrl("pages/homePage.qml"))
+                                stackView.push(Qt.resolvedUrl("pages/homePage.qml"))
+//                                pagesView.setSource(Qt.resolvedUrl("pages/homePage.qml"))
                             }
 
 
@@ -356,9 +356,9 @@ Window {
                         onClicked: {
                             btnHome.isActiveMenu = false
                             btnSettings.isActiveMenu = true
-//                            stackView.push(Qt.resolvedUrl("pages/settingsPage.qml"))
+                            stackView.push(Qt.resolvedUrl("pages/settingsPage.qml"))
 
-                            pagesView.setSource(Qt.resolvedUrl("pages/settingsPage.qml"))
+//                            pagesView.setSource(Qt.resolvedUrl("pages/settingsPage.qml"))
                         }
 
 
@@ -380,18 +380,26 @@ Window {
                     anchors.bottomMargin: 25
                     anchors.topMargin: 0
 
-//                    StackView {
-//                        id: stackView
-//                        anchors.fill: parent
-//                        initialItem: Qt.resolvedUrl("pages/homePage.qml")
-//                    }
-
-                    Loader{
-                        id: pagesView
+                    StackView {
+                        id: stackView
                         anchors.fill: parent
-                        source: Qt.resolvedUrl("pages/homePage.qml")
-
+                        initialItem: Qt.resolvedUrl("pages/homePage.qml")
                     }
+
+//                    Loader{
+//                        id: pageHome
+//                        anchors.fill: parent
+//                        source: Qt.resolvedUrl("pages/homePage.qml")
+//                        visible: false
+
+//                    }
+//                    Loader{
+//                        id: pageSettings
+//                        anchors.fill: parent
+//                        source: Qt.resolvedUrl("pages/settingsPage.qml")
+//                        visible: true
+
+//                    }
                 }
 
                 Rectangle {
