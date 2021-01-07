@@ -28,6 +28,15 @@ Window {
     QtObject{
         id: internal
 
+        function resetResizeBorders(){
+            // RESIZE VISIBILITY
+            resizeLeft.visible = true
+            resizeBottom.visible = true
+            resizeRight.visible = true
+            resizeWindow.visible = true
+        }
+
+
         function maximizeRestore(){
             if(windowStatus == 0){
 
@@ -48,10 +57,9 @@ Window {
                 windowStatus = 0
                 windowMargin = 10
 
-                resizeLeft.visible = true
-                resizeBottom.visible = true
-                resizeRight.visible = true
-                resizeWindow.visible = true
+                // Resize visibility
+                internal.resetResizeBorders()
+
 
                 btnMaximizeRestore.btnIconSource = "../image/svg_images/maximize_icon.svg"
             }
@@ -62,6 +70,8 @@ Window {
                 mainWindow.showNormal()
                 windowStatus = 0
                 windowMargin =10
+                // Resize visibility
+                internal.resetResizeBorders()
                 btnMaximizeRestore.btnIconSource = "../image/svg_images/maximize_icon.svg"
             }
         }
@@ -69,6 +79,8 @@ Window {
         function restoreMargins(){
             windowStatus = 0
             windowMargin = 10
+            // Resize visibility
+            internal.resetResizeBorders()
             btnMaximizeRestore.btnIconSource = "../image/svg_images/maximize_icon.svg"
         }
 
