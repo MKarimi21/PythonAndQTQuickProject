@@ -320,14 +320,14 @@ Window {
                         }
 
                         LeftMenuBtn {
-                            id: btnHome1
+                            id: btnOpen
                             text: qsTr("Open")
                             isActiveMenu: false
                             btnIconSource: "../image/svg_images/open_icon.svg"
                         }
 
                         LeftMenuBtn {
-                            id: btnHome2
+                            id: btnSave
                             text: qsTr("Save")
                             isActiveMenu: false
                             btnIconSource: "../image/svg_images/save_icon.svg"
@@ -336,7 +336,7 @@ Window {
                     }
 
                     LeftMenuBtn {
-                        id: btnHome3
+                        id: btnSettings
                         width: leftMenu.width
                         x: 0
                         y: 413
@@ -347,7 +347,13 @@ Window {
 
                         anchors.bottomMargin: 25
                         btnIconSource: "../image/svg_images/settings_icon.svg"
-                        isActiveMenu: false
+                        onClicked: {
+                            btnHome.isActiveMenu = false
+                            btnSettings.isActiveMenu = true
+                            stackView.push(Qt.resolvedUrl("pages/settingsPage.qml"))
+                        }
+
+
                     }
 
 
@@ -368,6 +374,7 @@ Window {
                     StackView {
                         id: stackView
                         anchors.fill: parent
+                        initialItem: Qt.resolvedUrl("pages/homePage.qml")
                     }
                 }
 
