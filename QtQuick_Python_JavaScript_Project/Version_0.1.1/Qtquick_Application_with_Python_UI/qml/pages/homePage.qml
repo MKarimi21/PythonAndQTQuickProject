@@ -4,13 +4,14 @@ import QtQuick.Controls 2.15
 Item {
     Rectangle {
         id: rectangle
-        color: "#e44646"
+        color: "#2c313c"
         anchors.fill: parent
 
         Label {
             id: label
             x: 386
             y: 265
+            color: "#ffffff"
             text: qsTr("Home Page")
             anchors.verticalCenter: parent.verticalCenter
             horizontalAlignment: Text.AlignHCenter

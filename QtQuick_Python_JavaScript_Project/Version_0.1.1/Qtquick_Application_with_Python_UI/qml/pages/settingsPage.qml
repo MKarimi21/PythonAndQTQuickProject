@@ -4,7 +4,7 @@ import QtQuick.Controls 2.15
 Item {
     Rectangle {
         id: rectangle
-        color: "#1c1d20"
+        color: "#2c313c"
         anchors.fill: parent
 
         Label {
@@ -23,3 +23,9 @@ Item {
     }
 
 }
+
+/*##^##
+Designer {
+    D{i:0;autoSize:true;height:480;width:800}
+}
+##^##*/

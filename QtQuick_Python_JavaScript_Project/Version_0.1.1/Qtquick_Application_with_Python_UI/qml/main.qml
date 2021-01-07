@@ -318,7 +318,8 @@ Window {
                             onClicked: {
                                 btnHome.isActiveMenu = true
                                 btnSettings.isActiveMenu = false
-                                stackView.push(Qt.resolvedUrl("pages/homePage.qml"))
+//                                stackView.push(Qt.resolvedUrl("pages/homePage.qml"))
+                                pagesView.setSource(Qt.resolvedUrl("pages/homePage.qml"))
                             }
 
 
@@ -355,7 +356,9 @@ Window {
                         onClicked: {
                             btnHome.isActiveMenu = false
                             btnSettings.isActiveMenu = true
-                            stackView.push(Qt.resolvedUrl("pages/settingsPage.qml"))
+//                            stackView.push(Qt.resolvedUrl("pages/settingsPage.qml"))
+
+                            pagesView.setSource(Qt.resolvedUrl("pages/settingsPage.qml"))
                         }
 
 
@@ -377,10 +380,17 @@ Window {
                     anchors.bottomMargin: 25
                     anchors.topMargin: 0
 
-                    StackView {
-                        id: stackView
+//                    StackView {
+//                        id: stackView
+//                        anchors.fill: parent
+//                        initialItem: Qt.resolvedUrl("pages/homePage.qml")
+//                    }
+
+                    Loader{
+                        id: pagesView
                         anchors.fill: parent
-                        initialItem: Qt.resolvedUrl("pages/homePage.qml")
+                        source: Qt.resolvedUrl("pages/homePage.qml")
+
                     }
                 }
 
