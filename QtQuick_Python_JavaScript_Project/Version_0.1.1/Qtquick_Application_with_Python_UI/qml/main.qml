@@ -17,6 +17,13 @@ Window {
 
     title: qsTr("Couse Qt Quick")
 
+    // INTERNAL FUNCTION FOR MINIMIZE, MAXIMIZE and CLOSE APP
+    QtObject{
+        id: internal
+
+    }
+
+
     Rectangle {
         id: bg
         color: "#1d3b44"
@@ -31,6 +38,7 @@ Window {
         anchors.leftMargin: 10
         anchors.bottomMargin: 10
         anchors.topMargin: 10
+        z: 1
 
         Rectangle {
             id: appContainer
@@ -168,18 +176,21 @@ Window {
 
                     TopBarButton{
                         id: btnMinimize
+                        onClicked: mainWindow.showMinimized()
 
                     }
 
                     TopBarButton {
                         id: btnMaximizeRestore
                         btnIconSource: "../image/svg_images/maximize_icon.svg"
+                        onClicked: mainWindow.showMaximized()
                     }
 
                     TopBarButton {
                         id: btnClose
                         btnColorClicked: "#b50a40"
                         btnIconSource: "../image/svg_images/close_icon.svg"
+                        onClicked: mainWindow.close()
                     }
                 }
             }
