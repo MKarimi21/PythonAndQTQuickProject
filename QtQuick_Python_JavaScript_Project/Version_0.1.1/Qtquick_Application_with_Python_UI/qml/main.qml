@@ -34,6 +34,11 @@ Window {
                 mainWindow.showMaximized()
                 windowStatus = 1
                 windowMargin = 0
+                // Resize  visibility by mouse area off when maximize size of app
+                resizeLeft.visible = false
+                resizeBottom.visible = false
+                resizeRight.visible = false
+                resizeWindow.visible = false
 
                 btnMaximizeRestore.btnIconSource = "../image/svg_images/restore_icon.svg"
             }
@@ -42,6 +47,12 @@ Window {
                 mainWindow.showNormal()
                 windowStatus = 0
                 windowMargin = 10
+
+                resizeLeft.visible = true
+                resizeBottom.visible = true
+                resizeRight.visible = true
+                resizeWindow.visible = true
+
                 btnMaximizeRestore.btnIconSource = "../image/svg_images/maximize_icon.svg"
             }
         }
