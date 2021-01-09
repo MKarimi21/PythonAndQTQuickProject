@@ -10,6 +10,14 @@ class MainWindow(QObject):
     def __init__(self):
         QObject.__init__(self)
 
+    # Signal Set Name
+    setName = Signal(str)
+
+
+    # Function set Name to Lable
+    @Slot(str)
+    def welcomeText(self, name):
+        self.getName.emit("Wlcome, {0}".format(name))
 
 
 
@@ -22,7 +30,7 @@ if __name__ == "__main__":
     main = MainWindow()
     engine.rootContext().setContextProperty("backend", main)
 
-
+    # Load Qml File
     engine.load(os.path.join(os.path.dirname(__file__), "qml/main.qml"))
 
     if not engine.rootObjects():
