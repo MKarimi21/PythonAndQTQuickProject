@@ -2,6 +2,7 @@ import QtQuick 2.15
 import QtQuick.Window 2.15
 import QtQuick.Controls 2.15
 import QtGraphicalEffects 1.15
+import QtQuick.Dialogs 1.3
 import "controls"
 
 Window {
@@ -334,21 +335,24 @@ Window {
                             isActiveMenu: false
                             btnIconSource: "../image/svg_images/open_icon.svg"
 
-//                            onPressed: {
-//                               fileOpen.open()
-//                               }
 
-//                               FileDialog{
-//                                   id: fileOpen
-//                                   title: "Please choose a file"
-//                                   folder: shortcuts.home
-//                                   selectMultiple: false
-//                                   nameFilters: ["Text File (*.txt)"]
-//                                   onAccepted: {
-//                                       backend.openFile(fileOpen.fileUrl)
-//                                   }
-//                               }
-                        }
+                            onPressed: {
+                                fileOpn.open()
+                            }
+
+                            FileDialog{
+                                id: fileOpen
+                                title: "Please Choose a File"
+                                folder: shortcuts.home
+                                selectMultiple: false
+                                nameFilters: ["Text File (*.txt)"]
+                                onAccepted:{
+                                    backend.openFile(fileOpen.fileUrl)
+                                }
+                            }
+
+
+                    }
 
                         LeftMenuBtn {
                             id: btnSave
@@ -560,7 +564,14 @@ Window {
     }
 
 
+    Connections{
+        target: backend
 
+        function onReadText(text){
+            actualPage.setText = text
+        }
+
+    }
 
 
 
