@@ -1,7 +1,7 @@
 # This Python file uses the following encoding: utf-8
 import sys
 import os
-import datatime
+import datetime
 
 from PySide2.QtGui import QGuiApplication
 from PySide2.QtQml import QQmlApplicationEngine
@@ -11,10 +11,10 @@ class MainWindow(QObject):
     def __init__(self):
         QObject.__init__(self)
 
-    # QTimer - Run Timer
-    self.timer = QTimer()
-    self.timer.timeout.connect(lambda: self.setTime())
-    self.timer.start(1000)
+        # QTimer - Run Timer
+        self.timer = QTimer()
+        self.timer.timeout.connect(lambda: self.setTime())
+        self.timer.start(1000)
 
     # Signal Set Data
     printTime = Signal(str)
@@ -23,8 +23,8 @@ class MainWindow(QObject):
 
     # Set Timer Function
     def setTime(self):
-        now = datatime.datatime.now()
-        formatDate = now.strftime("Now is {0}:{1}:{2} {3} of {4}{5}{6}".format(H, M, S, p, Y, m, d))
+        now = datetime.datetime.now()
+        formatDate = now.strftime("Now is %H:%M:%S %p of %A, %d. %B %Y")
 
         print(formatDate)
         self.printTime.emit(formatDate)

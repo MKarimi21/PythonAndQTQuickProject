@@ -163,7 +163,7 @@ Item {
 
         }
 
-        function onPrintItem(time){
+        function onPrintTtem(time){
             labelDate.text = time
 
         }
