@@ -35,7 +35,7 @@ Item {
                 CustomTextField {
                     id: textField
 
-                    placeholderText: "Type Your Name"
+                    placeholderText: "Type Your Name"   // TODO: HAVE BUG => WHY DONT READ
                     Layout.fillWidth: true
                     Keys.onEnterPressed: {
                         backend.welcomText(textField.text)
