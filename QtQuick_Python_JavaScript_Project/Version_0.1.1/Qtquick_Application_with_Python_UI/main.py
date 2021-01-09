@@ -14,11 +14,20 @@ class MainWindow(QObject):
     # QTimer - Run Timer
     self.timer = QTimer()
     self.timer.timeout.connect(lambda: self.setTime())
+    self.timer.start(1000)
+
+    # Signal Set Data
+    printTime = Signal(str)
+
+
 
     # Set Timer Function
     def setTime(self):
         now = datatime.datatime.now()
         formatDate = now.strftime("Now is {0}:{1}:{2} {3} of {4}{5}{6}".format(H, M, S, p, Y, m, d))
+
+        print(formatDate)
+        self.printTime.emit(formatDate)
 
 
     # Signal Set Name
