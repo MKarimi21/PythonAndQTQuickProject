@@ -4,9 +4,11 @@ import os
 
 from PySide2.QtGui import QGuiApplication
 from PySide2.QtQml import QQmlApplicationEngine
+from PySide2.QtCore import QObject, Slot, Signal
 
-
-class MainWindow
+class MainWindow(QObject):
+    def __init__(self):
+        QObject.__init__(self)
 
 
 
@@ -18,7 +20,7 @@ if __name__ == "__main__":
 
     # GET CONTEXT
     main = MainWindow()
-
+    engine.rootContext().setContextProperty("backend", main)
 
 
     engine.load(os.path.join(os.path.dirname(__file__), "qml/main.qml"))
