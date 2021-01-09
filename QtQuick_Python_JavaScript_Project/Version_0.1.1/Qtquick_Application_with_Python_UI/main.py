@@ -20,6 +20,19 @@ class MainWindow(QObject):
     printTime = Signal(str)
 
 
+    # SIGNAL VISIBLE
+    isVisible = Signal(bool)
+
+
+    # SHOW or HIDE RECTANGLE
+    @Slot(bool)
+    def showHideRectangle(self, isChecked):
+        print("Is rectangle visible: {0}".format(isChecked))
+        self.isVisible.emit(isChecked)
+
+
+
+
 
     # Set Timer Function
     def setTime(self):
