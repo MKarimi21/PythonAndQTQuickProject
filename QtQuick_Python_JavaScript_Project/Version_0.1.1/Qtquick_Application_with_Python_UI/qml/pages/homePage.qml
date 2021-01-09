@@ -67,7 +67,7 @@ Item {
                     Layout.preferredWidth: 68
                     // CHANGE SHOW OR HIDE FRAME
                     onToggled: {
-                        backend.showHideRectangle(switchHome.clicked)
+                        backend.showHideRectangle(switchHome.checked)
                     }
 
 
@@ -91,6 +91,63 @@ Item {
             anchors.leftMargin: 50
             anchors.rightMargin: 50
             anchors.topMargin: 10
+
+            Label{
+                id: labelTextName
+                y: 8
+                height: 25
+                color: "#5c667d"
+                text: qsTr("Welcom")
+                anchors.left: parent.left
+                anchors.right: parent.right
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                anchors.leftMargin: 10
+                anchors.rightMargin: 10
+                font.pointSize: 14
+
+            }
+
+            Label{
+                id: labelData
+                y: 31
+                height: 25
+                color: "#55aaff"
+                text: qsTr("Data")
+                anchors.left: parent.left
+                anchors.right: parent.right
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                anchors.leftMargin: 10
+                anchors.rightMargin: 10
+                font.pointSize: 12
+
+            }
+
+
+            ScrollView{
+                id: scrollView
+                anchors.left: parent.left
+                anchors.right: parent.right
+                anchors.top: labelData.bottom
+                anchors.bottom: parent.bottom
+                clip: true
+                anchors.rightMargin: 10
+                anchors.leftMargin: 10
+                anchors.bottomMargin: 10
+                anchors.topMargin: 10
+
+                Text{
+                    id: textHome
+                    color: "#a9b2c8"
+                    text: "SALAM"       // TODO: Edit Page
+                    anchors.fill: parent
+                    font.pixelSize: 12
+                    textFormat: Text.RichText
+                }
+
+
+            }
         }
 
 
