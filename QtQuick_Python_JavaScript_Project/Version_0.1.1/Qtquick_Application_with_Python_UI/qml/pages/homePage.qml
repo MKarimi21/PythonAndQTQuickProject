@@ -35,7 +35,7 @@ Item {
                 CustomTextField {
                     id: textField
 
-                    placeholderText: "Type Your Name"   // TODO: HAVE BUG => WHY DONT READ
+//                    placeholderText: "Type Your Name"   // TODO: HAVE BUG => WHY DONT READ
                     Layout.fillWidth: true
                     Keys.onEnterPressed: {
                         backend.welcomText(textField.text)
@@ -47,6 +47,26 @@ Item {
                 }
 
                 CustomButton{
+                    id: btnChangeName
+                    text: "Change Name"
+                    Layout.maximumWidth: 200
+                    Layout.fillWidth: true
+                    Layout.preferredHeight: 40
+                    Layout.preferredWidth: 250
+                    onClicked: {
+                        backend.welcomText(textField.text)
+                    }
+
+                }
+
+                Switch{
+                    id: switchHome
+                    text: qsTr("Switch")
+                    checked: true
+                    Layout.preferredHeight: 40
+                    Layout.preferredWidth: 68
+                    // CHANGE SHOW OR HIDE FRAME
+
 
                 }
 
@@ -76,3 +96,9 @@ Item {
 
 
 }
+
+/*##^##
+Designer {
+    D{i:0;autoSize:true;height:480;width:640}D{i:2}D{i:7}
+}
+##^##*/
