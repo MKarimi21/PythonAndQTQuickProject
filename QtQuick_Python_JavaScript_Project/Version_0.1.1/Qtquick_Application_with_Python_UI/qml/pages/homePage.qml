@@ -35,7 +35,7 @@ Item {
                 CustomTextField {
                     id: textField
 
-                    placeholderText: "Type yuor name"   // TODO: HAVE BUG => WHY DONT READ
+                    placeholderText: "Type yuor name"
                     Layout.fillWidth: true
 
 
@@ -113,11 +113,11 @@ Item {
             }
 
             Label{
-                id: labelData
+                id: labelDate
                 y: 31
                 height: 25
                 color: "#55aaff"
-                text: qsTr("Data")
+                text: qsTr("Date")
                 anchors.left: parent.left
                 anchors.right: parent.right
                 horizontalAlignment: Text.AlignHCenter
@@ -133,7 +133,7 @@ Item {
                 id: scrollView
                 anchors.left: parent.left
                 anchors.right: parent.right
-                anchors.top: labelData.bottom
+                anchors.top: labelDate.bottom
                 anchors.bottom: parent.bottom
                 clip: true
                 anchors.rightMargin: 10
@@ -163,7 +163,7 @@ Item {
 
         }
 
-        function onPrintTtem(time){
+        function onPrintTime(time){
             labelDate.text = time
 
         }
