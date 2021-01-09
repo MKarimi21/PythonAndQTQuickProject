@@ -66,6 +66,9 @@ Item {
                     Layout.preferredHeight: 40
                     Layout.preferredWidth: 68
                     // CHANGE SHOW OR HIDE FRAME
+                    onToggled: {
+                        backend.showHideRectangle(switchHome.clicked)
+                    }
 
 
                 }
@@ -89,6 +92,26 @@ Item {
             anchors.rightMargin: 50
             anchors.topMargin: 10
         }
+
+
+    Connections{
+        target: backend
+
+        function onSetName(name){
+            labelTextName.text = name
+
+        }
+
+        function onPrintItem(time){
+            labelDate.text = time
+
+        }
+
+        function onIsVisible(isVisible){
+            rectangleVisible.visible = isVisible
+        }
+
+    }
 
 
     }
