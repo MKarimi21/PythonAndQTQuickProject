@@ -24,7 +24,7 @@ Item {
             color: "#495163"
 
             GridLayout {
-                id: gridLayout
+//                id: gridLayout
                 anchors.fill: parent
                 columns: 3
                 rows: 1
@@ -35,8 +35,10 @@ Item {
                 CustomTextField {
                     id: textField
 
-//                    placeholderText: "Type Your Name"   // TODO: HAVE BUG => WHY DONT READ
+                    placeholderText: "Type SomeThing"   // TODO: HAVE BUG => WHY DONT READ
                     Layout.fillWidth: true
+
+
                     Keys.onEnterPressed: {
                         backend.welcomText(textField.text)
 
@@ -74,6 +76,7 @@ Item {
                 }
 
 
+
             }
 
 
@@ -81,6 +84,7 @@ Item {
 
         Rectangle {
             id: rectangleVisible
+
             color: "#1d2128"
             radius: 10
             anchors.left: parent.left
@@ -179,6 +183,6 @@ Item {
 
 /*##^##
 Designer {
-    D{i:0;autoSize:true;height:480;width:640}D{i:2}D{i:7}
+    D{i:0;autoSize:true;height:473;width:980}
 }
 ##^##*/

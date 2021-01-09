@@ -89,9 +89,9 @@ Window {
 
     Rectangle {
         id: bg
-        color: "#1d3b44"
+        color: "#2c313c"
         radius: 0
-        border.color: "#337688"
+        border.color: "#383e4c"
         border.width: 1
         anchors.left: parent.left
         anchors.right: parent.right
@@ -158,7 +158,7 @@ Window {
                     }
 
                     Label {
-                        id: labelRighteInfo
+                        id: labelRightInfo
                         color: "#5f6a82"
                         text: qsTr("| HOME")
                         anchors.left: labelTopInfo.right
@@ -311,7 +311,7 @@ Window {
 
                         LeftMenuBtn {
                             id: btnHome
-                            width: 250
+                            width: leftMenu.width
 
                             text: qsTr("Home")
                             isActiveMenu: true
@@ -319,6 +319,8 @@ Window {
                                 btnHome.isActiveMenu = true
                                 btnSettings.isActiveMenu = false
                                 stackView.push(Qt.resolvedUrl("pages/homePage.qml"))
+
+
 //                                pagesView.setSource(Qt.resolvedUrl("pages/homePage.qml"))
                             }
 
@@ -327,16 +329,34 @@ Window {
 
                         LeftMenuBtn {
                             id: btnOpen
+                            width: leftMenu.width
                             text: qsTr("Open")
                             isActiveMenu: false
                             btnIconSource: "../image/svg_images/open_icon.svg"
+
+//                            onPressed: {
+//                               fileOpen.open()
+//                               }
+
+//                               FileDialog{
+//                                   id: fileOpen
+//                                   title: "Please choose a file"
+//                                   folder: shortcuts.home
+//                                   selectMultiple: false
+//                                   nameFilters: ["Text File (*.txt)"]
+//                                   onAccepted: {
+//                                       backend.openFile(fileOpen.fileUrl)
+//                                   }
+//                               }
                         }
 
                         LeftMenuBtn {
                             id: btnSave
+                            width: leftMenu.width
                             text: qsTr("Save")
                             isActiveMenu: false
                             btnIconSource: "../image/svg_images/save_icon.svg"
+
                         }
 
                     }
@@ -344,12 +364,12 @@ Window {
                     LeftMenuBtn {
                         id: btnSettings
                         width: leftMenu.width
-                        x: 0
-                        y: 413
+//                        x: 0
+//                        y: 413
 
                         text: qsTr("Setting")
                         anchors.bottom: parent.bottom
-                        clip: true
+//                        clip: true
 
                         anchors.bottomMargin: 25
                         btnIconSource: "../image/svg_images/settings_icon.svg"
