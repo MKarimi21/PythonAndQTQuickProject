@@ -35,7 +35,7 @@ Item {
                 CustomTextField {
                     id: textField
 
-                    placeholderText: "Type SomeThing"   // TODO: HAVE BUG => WHY DONT READ
+                    placeholderText: "Type yuor name"   // TODO: HAVE BUG => WHY DONT READ
                     Layout.fillWidth: true
 
 
@@ -56,7 +56,7 @@ Item {
                     Layout.preferredHeight: 40
                     Layout.preferredWidth: 250
                     onClicked: {
-                        backend.welcomText(textField.text)
+                        backend.welcomeText(textField.text)
                     }
 
                 }
