@@ -1,14 +1,25 @@
 # This Python file uses the following encoding: utf-8
 import sys
 import os
+import datatime
 
 from PySide2.QtGui import QGuiApplication
 from PySide2.QtQml import QQmlApplicationEngine
-from PySide2.QtCore import QObject, Slot, Signal
+from PySide2.QtCore import QObject, Slot, Signal, QTimer
 
 class MainWindow(QObject):
     def __init__(self):
         QObject.__init__(self)
+
+    # QTimer - Run Timer
+    self.timer = QTimer()
+    self.timer.timeout.connect(lambda: self.setTime())
+
+    # Set Timer Function
+    def setTime(self):
+        now = datatime.datatime.now()
+        formatDate = now.strftime("Now is {0}:{1}:{2} {3} of {4}{5}{6}".format(H, M, S, p, Y, m, d))
+
 
     # Signal Set Name
     setName = Signal(str)
