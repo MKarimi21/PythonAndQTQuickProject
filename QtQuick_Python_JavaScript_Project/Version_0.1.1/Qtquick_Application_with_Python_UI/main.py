@@ -17,7 +17,7 @@ class MainWindow(QObject):
     # Function set Name to Lable
     @Slot(str)
     def welcomeText(self, name):
-        self.getName.emit("Wlcome, {0}".format(name))
+        self.setName.emit("Wlcome, {0}".format(name))
 
 
 
