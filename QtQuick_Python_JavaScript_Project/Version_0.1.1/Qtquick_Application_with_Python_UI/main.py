@@ -27,6 +27,23 @@ class MainWindow(QObject):
     readText = Signal(str)
 
 
+    # Text String
+    textField = ""
+
+    # Read Text
+    @Slot(str)
+    def getTextField(self, text):
+        self.textField = text
+
+    # Write File
+    @Slot(str)
+    def writeFile(self, filePath):
+        file = open(QUrl(filePath).toLocalFile(), "w")
+        file.write(self, self.textField)
+        file.close()
+        print(self.textField)
+
+
     # Open File
     @Slot(str)
     def openFile(self, filePath):
@@ -35,6 +52,9 @@ class MainWindow(QObject):
         file.close()
         print(text)
         self.readText.emit(str(text))
+
+
+
 
 
     # SHOW or HIDE RECTANGLE
