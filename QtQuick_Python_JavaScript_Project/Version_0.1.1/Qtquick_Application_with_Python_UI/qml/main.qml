@@ -407,7 +407,7 @@ Window {
                     StackView {
                         id: stackView
                         anchors.fill: parent
-                        initialItem: Qt.resolvedUrl("pages/homePage.qml")
+                        initialItem: Qt.resolvedUrl("pages/textEditor.qml")
                     }
 
 //                    Loader{
