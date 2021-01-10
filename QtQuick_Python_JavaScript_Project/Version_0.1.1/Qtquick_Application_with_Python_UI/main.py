@@ -23,6 +23,9 @@ class MainWindow(QObject):
     # SIGNAL VISIBLE
     isVisible = Signal(bool)
 
+    # Open File to Text Edit
+    readText = Signal(str)
+
 
     # Open File
     @Slot(str)
