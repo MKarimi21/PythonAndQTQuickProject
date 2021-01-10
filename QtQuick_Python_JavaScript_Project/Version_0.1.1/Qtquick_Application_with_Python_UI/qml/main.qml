@@ -337,7 +337,7 @@ Window {
 
 
                             onPressed: {
-                                fileOpn.open()
+                                fileOpen.open()
                             }
 
                             FileDialog{
@@ -360,6 +360,17 @@ Window {
                             text: qsTr("Save")
                             isActiveMenu: false
                             btnIconSource: "../image/svg_images/save_icon.svg"
+
+                            FileDialog{
+                                id: fileSave
+                                title: "Save File"
+                                folder: shortcuts.home
+                                selectMultiple: false
+                                nameFilters: ["Text File (*.txt)"]
+                                onAccepted:{
+                                    backend.openFile(fileOpen.fileUrl)
+                                }
+                            }
 
                         }
 
