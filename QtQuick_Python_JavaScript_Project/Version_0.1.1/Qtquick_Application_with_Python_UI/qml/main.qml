@@ -380,7 +380,7 @@ Window {
                                 selectExisting: false
 
                                 onAccepted:{
-                                    backend.openFile(fileOpen.fileUrl)
+                                    backend.getTextField(actualPage.getText)
                                 }
                             }
 
