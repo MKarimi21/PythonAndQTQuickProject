@@ -39,7 +39,7 @@ class MainWindow(QObject):
     @Slot(str)
     def writeFile(self, filePath):
         file = open(QUrl(filePath).toLocalFile(), "w")
-        file.write(self, self.textField)
+        file.write(self.textField)
         file.close()
         print(self.textField)
 

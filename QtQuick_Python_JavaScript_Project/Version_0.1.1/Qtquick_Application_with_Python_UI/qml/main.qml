@@ -381,6 +381,8 @@ Window {
 
                                 onAccepted:{
                                     backend.getTextField(actualPage.getText)
+                                    backend.writeFile(fileSave.fileUrl)
+
                                 }
                             }
 
