@@ -27,6 +27,8 @@ Item {
                     color: "#ffffff"
                     font.pointSize: 12
                     text: setText
+
+
                 }
 
                 ScrollBar.vertical: ScrollBar{}
@@ -36,3 +38,9 @@ Item {
         }
 
 }
+
+/*##^##
+Designer {
+    D{i:0;autoSize:true;height:480;width:800}
+}
+##^##*/

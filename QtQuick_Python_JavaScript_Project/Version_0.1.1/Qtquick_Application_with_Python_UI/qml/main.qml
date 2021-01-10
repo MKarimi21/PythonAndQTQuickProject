@@ -25,6 +25,12 @@ Window {
     property int windowMargin: 10
 
 
+
+    // Text Edit Properties
+    property alias actualPage: stackView.currentItem
+
+
+
     // INTERNAL FUNCTION FOR MINIMIZE, MAXIMIZE and CLOSE APP
     QtObject{
         id: internal
